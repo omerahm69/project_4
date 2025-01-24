@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from my_restaurant.views import home
+
 
 urlpatterns = [
     path("my_restaurant/", include("my_restaurant.urls")),
