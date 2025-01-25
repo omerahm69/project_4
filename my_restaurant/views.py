@@ -6,4 +6,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
-        return render(request, 'home.html')
+        return render(request, 'my_restaurant/home.html')
+
+def about_us(request):
+        return render(request, 'my_restaurant/about_us.html')
+
