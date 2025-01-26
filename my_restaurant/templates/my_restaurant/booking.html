@@ -5,13 +5,10 @@
     <meta name="viewsport" content="width=device-width, initial-scale =1.0">
     <title> Book a Table</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-
 </head>
-
 <body>
 <div class="container py-5">
     <h2 class="text-center mb-4">Book a Table</h2>
-
     <form id="bookingForm" class="need-validation" novalidate>
         <div class="mb-3">
             <label for="date" class="form-label">Date</label>
@@ -42,7 +39,6 @@
                 <div class="modal-header">
                     <h5 class="modal-tilte" id="confirmationModalLabel">Confirm Your Booking</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                
                 </div>
             <div class="modal-body">
                 <p> Please confirm your booking details:</p>
@@ -50,7 +46,6 @@
                     <li><strong>Date:</strong><span id="confirmDate"></span></li>
                     <li><strong>Time:</strong><span id="confirmTime"></span></li>
                     <li><strong>Guests:</strong><span id="confirmGuests"></span></li>
-                    
                 </ul>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secodary" data-bs-dismiss="modal">Cancel</button>
@@ -59,12 +54,8 @@
             </div>
         </div>
     </div>
-
-
      </div>
-
 </div>
-
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
@@ -99,6 +90,5 @@
     alert('Your booking has been confirmed! Thank you.');
   });
 </script>
-
 </body>
 </html>
