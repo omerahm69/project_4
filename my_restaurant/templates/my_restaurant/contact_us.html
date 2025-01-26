@@ -6,49 +6,26 @@
     <title> Contact Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
 
-
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-        <a class="navbar-brand" href="#">Asmarino Restaurant</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-items"><a class="nav-link" href="{% url 'home'%}">Home</a></li>
-                <li class="nav-items"><a class="nav-link" href="{% url 'about_us' %}">About Us</a></li>
-                <li class="nav-items"><a class="nav-link" href="{% url 'menu' %}">Menu</a></li>
-                <li class="nav-items"><a class="nav-link" href="{% url 'booking' %}">Book a Table</a></li>
-                <li class="nav-items"><a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a></li>
-
-
-            </ul>
-
-        </div>
-
-    </nav>
-    <header class="bg-primary text-white text-center py-5">
-        <img src="loggo" alt="Asmarino Restaurant Logo" class="logo mx-auto mb-3 style=width:100px; height: auto;">
-        <h1> Welcome to Asmarino Restaurant</h1>
-        <p>Experience finest diningg with us! and book your table online</p>
-        <a href="{% url 'booking'%}" class="btn btn-light mt-3"> Book Now</a>
-        
-    </header>
-
     <section class="container my-5" id="specials">
-        <h2 class="text-center mb-4">Special offerings</h2>
-        <div class ="rows">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="">
-
-                </div>
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <form >
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
             </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>     
         </div>
-
-
     </section>
     <footer class ="bg-light text-center py-4">
         <p>&copy; 2025 Restaurant Asmarino. ALL Rights Reserved.</p>
