@@ -6,3 +6,5 @@ class restaurant(models.Model):
     price= models.FloatField()
     quantity=models.IntegerField()
     image=models.CharField(max_length=2083)
+
+    
