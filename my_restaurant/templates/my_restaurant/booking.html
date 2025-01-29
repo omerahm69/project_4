@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+{% load static  %}
 <html lang="eng">
 <head>
     <meta charset="UTF-8">
     <meta name="viewsport" content="width=device-width, initial-scale =1.0">
     <title> Book a Table</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
 <div class="container py-5">
@@ -29,11 +31,11 @@
         </div>
         <button type="submit" class="btn btn-primary"> Check Availability</button>
     </form>
-     <!-- Availability Result -->
+    <!-- Availability Result -->
     <div id="availabilityResult" class="mt-4"></div>
     
     <!-- Confirmation Modal -->
-     <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -54,13 +56,13 @@
             </div>
         </div>
     </div>
-     </div>
+    </div>
 </div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script>
-  $('#bookingForm').on('submit', function(event) {
+    $('#bookingForm').on('submit', function(event) {
     event.preventDefault();
     
     // Gather user input
@@ -70,25 +72,25 @@
 
     if (date && time && guests) {
       // Show availability result
-      $('#availabilityResult').html('<p class="text-success">Table is available! Please confirm your booking.</p>');
+    $('#availabilityResult').html('<p class="text-success">Table is available! Please confirm your booking.</p>');
 
       // Set confirmation details
-      $('#confirmDate').text(date);
-      $('#confirmTime').text(time);
-      $('#confirmGuests').text(guests);
+    $('#confirmDate').text(date);
+    $('#confirmTime').text(time);
+    $('#confirmGuests').text(guests);
 
       // Show confirmation modal
-      $('#confirmationModal').modal('show');
+    $('#confirmationModal').modal('show');
     } else {
-      $('#availabilityResult').html('<p class="text-danger">Please complete all fields.</p>');
+    $('#availabilityResult').html('<p class="text-danger">Please complete all fields.</p>');
     }
-  });
+    });
 
-  $('#confirmBooking').on('click', function() {
+    $('#confirmBooking').on('click', function() {
     // Handle booking confirmation (e.g., send to server or display success message)
     $('#confirmationModal').modal('hide');
     alert('Your booking has been confirmed! Thank you.');
-  });
+    });
 </script>
 </body>
 </html>

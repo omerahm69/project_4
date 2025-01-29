@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+{% load static  %}
 <html lang="eng">
 <head>
     <meta charset="UTF-8">
     <meta name="viewsport" content="width=device-width, initial-scale =1.0">
     <title> Contact Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
     <section class="container my-5" id="specials">
@@ -23,7 +25,7 @@
                 <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-        </form>     
+        </form>
         </div>
     </section>
     <footer class ="bg-light text-center py-4">
