@@ -15,9 +15,11 @@ def about_us(request):
 def menu(request):
         return render(request, 'my_restaurant/menu.html')
 
+def booking(request):
+        return render(request, 'my_restaurant/booking.html')
+
 def contact(request):
         return render(request, 'my_restaurant/contact_us.html')
 
-def booking(request):
-        return render(request, 'my_restaurant/booking.html')
+
 
