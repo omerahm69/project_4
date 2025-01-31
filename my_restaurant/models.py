@@ -6,5 +6,5 @@ class restaurant(models.Model):
     price= models.FloatField()
     quantity=models.IntegerField()
     image=models.CharField(max_length=2083)
+    banner=models.ImageField(default=(''), blank=True)
 
-    

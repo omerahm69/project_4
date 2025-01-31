@@ -78,11 +78,24 @@ WSGI_APPLICATION = 'restaurant.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default':
-        dj_database_url.parse(os.environ.get("DATABASE_URL"))
-    }
+#DATABASES = {
+    #'default':
+    #   dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    #}
+#DATABASES = {
+ #   'default': dj_database_url.config(default='postgresql://neondb_owner:RjCNAK0qS8Iy@ep-orange-bush-a29x4sqc.eu-central-1.aws.neon.tech/aloha_kite_patch_309821')
+#}
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'aloha_kite_patch_309821',
+        'USER': 'neondb_owner',
+        'PASSWORD': 'RjCNAK0qS8Iy',
+        'HOST': 'ep-orange-bush-a29x4sqc.eu-central-1.aws.neon.tech',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
@@ -119,7 +132,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = ' static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
