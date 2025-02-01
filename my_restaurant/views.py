@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from . models import restaurant
+from . models import MenuItem
+
 
 #from django.views import generic
 
@@ -9,7 +11,7 @@ from . models import restaurant
 
 def home(request):
         return render(request, 'my_restaurant/home.html')
-        #Restaurant= restaurant.objects.all()
+        Restaurant= restaurant.objects.all()
 def about_us(request):
         return render(request, 'my_restaurant/about_us.html')
 
@@ -22,5 +24,11 @@ def booking(request):
 def contact(request):
         return render(request, 'my_restaurant/contact_us.html')
 
+def login(request):
+        return render(request, 'my_restaurant/login.html')
 
+
+def menu_view(request):
+        menu_items = MenuItem.objects.filter(available=True)
+        return render(request, 'restaurant/menu.html', {'menu_items': menu_items})
 
