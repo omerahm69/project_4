@@ -9,4 +9,42 @@
     <p>Experience the finest dining with us! Book your table online now.</p>
     <a href="{% url 'booking' %}" class="btn btn-light mt-3">Book Now</a>
 </header>
+
+    <!-- Specials Section-->
+    <section class="container my-5" id="specials">
+        <h2 class="text-center mb-4">Special offerings</h2>
+        <div class ="row g-4">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{% static 'images/grilled_salmon.jpg' %}" alt="Grilled Salmon" class="card-img-top">
+                <div class ="card-body text-center">
+                    <h5 class="card-title">Grilled Salmon</h2>
+                    <p class="card-text">Freshly grilled salmon served with lemon butter sauce.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card">
+                    <img src="{% static 'images/Classic_burger.jpg' %}" alt="Classic Burger"  class="card-img-top" >
+                    <div class ="card-body text-center">
+                        <h5 class="card-title">Classic Burger</h2>
+                        <p class="card-text">Juicy beef patty with all the fixings, served with fries.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                        <img src="{% static 'images/Roasted-rib-on-salad.jpeg' %}" alt="Roasted Rib" class="card-img-top">
+                        <div class ="card-body">
+                            <h5 class="card-title">Roasted Rib</h2>
+                            <p class="card-text">Roasted rib steak with garlik and butter on salad, served with fries.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
 {% endblock %}
