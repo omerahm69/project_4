@@ -6,7 +6,7 @@ class restaurant(models.Model):
     name=models.CharField(max_length=255)
     price= models.FloatField()
     quantity=models.IntegerField()
-    image=models.CharField(max_length=2083)
+    #image=models.CharField(max_length=2083)
     banner=models.ImageField(default=(''), blank=True)
 
 
@@ -22,7 +22,9 @@ class Customer(models.Model):
 class MenuItem(models.Model):
     name=models.CharField(max_length=100)
     description=models.TextField()
-    
+    quantity=models.IntegerField(default=0)
+    image = models.ImageField(upload_to='menu_images/', default='menu_images/default.jpg', null=True, blank=True)
+    banner=models.ImageField(default=(''), blank=True)
     price=models.DecimalField(max_digits=6, decimal_places=2)
     available=models.BooleanField(default=True)
 

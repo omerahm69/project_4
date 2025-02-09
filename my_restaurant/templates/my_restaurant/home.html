@@ -1,10 +1,13 @@
-{% extends 'base.html' %}
 
-{% block title %}Home | Asmarino Restaurant{% endblock %}
+{% extends 'my_restaurant/base.html' %}
+{% load static%}
+{% block title %}Home | Asmarino Restaurant
+
+{% endblock %}
 
 {% block content %}
 <header class="bg-primary text-white text-center py-5">
-    <img src="{% static 'images/logo.png' %}" alt="Asmarino Restaurant Logo" class="logo mx-auto mb-3">
+    
     <h1>Welcome to Asmarino Restaurant</h1>
     <p>Experience the finest dining with us! Book your table online now.</p>
     <a href="{% url 'booking' %}" class="btn btn-light mt-3">Book Now</a>

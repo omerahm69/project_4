@@ -1,6 +1,7 @@
 
-{% extends 'base.html' %}
 
+{% extends 'my_restaurant/base.html' %}
+{% load static%}
 {% block title %}Contact Us | Asmarino Restaurant{% endblock %}
 
 {% block content %}
@@ -8,7 +9,7 @@
 <p class="text-center">Feel free to reach out for reservations or inquiries!</p>
     <section class="container my-5" id="specials">
         <h2 class="text-center mb-4">Contact Us</h2>
-        <form action="{% url 'contact' %}" method="POST">
+        <form action="{% url 'contact_us' %}" method="POST">
             {% csrf_token %}
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>

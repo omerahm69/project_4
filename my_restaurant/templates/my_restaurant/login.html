@@ -1,6 +1,7 @@
 
-% extends 'base.html' %}
 
+{% extends 'my_restaurant/base.html' %}
+{% load static%}
 {% block title %}Contact Us | Asmarino Restaurant{% endblock %}
 {% block content %}
 
@@ -11,7 +12,7 @@
                 <h1 class="text-center">Login</h1>
                 <p class="text-center">ADon't have an account? <a href="/register/">Registe</a></p>
                 
-            <form method="POST" action="/login/"> 
+            <form method="POST" action="/login/">
                 {% csrf_token %}
                 <div class="mb-3">
                     <label for="username" class="form-label">
