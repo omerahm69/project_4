@@ -4,14 +4,15 @@
 {% load static%}
 {% block title %}Contact Us | Asmarino Restaurant{% endblock %}
 {% block content %}
-
+<header class="bg-primary text-white text-center py-5">
+    
+    <h1>Login</h1>
+</header>
     <section class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card-md-6">
-                <h1 class="text-center">Login</h1>
-                <p class="text-center">ADon't have an account? <a href="/register/">Registe</a></p>
-                
+                <p class="text-center">If you don't have an account? <a href="/register/">Register</a></p>
             <form method="POST" action="/login/">
                 {% csrf_token %}
                 <div class="mb-3">

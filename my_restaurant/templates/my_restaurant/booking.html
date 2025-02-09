@@ -2,11 +2,14 @@
 
 {% extends 'my_restaurant/base.html' %}
 {% load static%}
-{% block title %}Contact Us | Asmarino Restaurant{% endblock %}
+{% block title %} | Asmarino Restaurant{% endblock %}
 
 {% block content %}
+<header class="bg-primary text-white text-center py-5">
+    
+    <h1>Book a Table</h1>
+</header>
 <div class="container py-5">
-    <h2 class="text-center mb-4">Book a Table</h2>
     <form id="bookingForm" class="need-validation" novalidate>
         <div class="mb-3">
             <label for="date" class="form-label">Date</label>
