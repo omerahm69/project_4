@@ -29,6 +29,6 @@ def login(request):
 
 
 def menu_view(request):
-        menu_items = MenuItem.objects.filter(available=True)
+        menu_items = MenuItem.objects.all()
         return render(request, 'restaurant/menu.html', {'menu_items': menu_items})
 

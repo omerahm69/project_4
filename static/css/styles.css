@@ -4,8 +4,13 @@ body {
 }
 
 .logo{
-    width: 120px;
+    width: 100px;
     height: auto;
+}
+
+.logo img{
+    height: 70px;
+    vertical-align: middle;
 }
 .card {
     border-radius: 10px;
