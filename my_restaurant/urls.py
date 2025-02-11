@@ -10,7 +10,8 @@ urlpatterns = [
     path('about_us/', views.about_us, name='about_us'),
     path('menu/', views.menu, name='menu'),
     path('booking/', views.booking, name='booking'),
-    path('contact_us/', views.contact, name='contact_us'),
-    path('login/', views.login, name='login'),
+    path('contact_us/', views.contact_us, name='contact_us'),
+    path('user_login/', views.user_login, name='login'),
+    path('MenuItem/',views.MenuItem, name='MenuItem')
     
 ]

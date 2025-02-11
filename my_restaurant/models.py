@@ -6,7 +6,7 @@ class restaurant(models.Model):
     name=models.CharField(max_length=255)
     price= models.FloatField()
     quantity=models.IntegerField()
-    #image=models.CharField(max_length=2083)
+    image=models.CharField(max_length=2083)
     banner=models.ImageField(default=(''), blank=True)
 
 
@@ -14,11 +14,10 @@ class Customer(models.Model):
     name=models.CharField(max_length=100)
     email=models.EmailField(unique=True)
     phone=models.CharField(max_length=15)
-
+    
     def __str__(self):
         return self.name
     
-
 class MenuItem(models.Model):
     name=models.CharField(max_length=100)
     description=models.TextField()
@@ -31,17 +30,14 @@ class MenuItem(models.Model):
     def __str__(self):
         return self.name
     
-
 class Order(models.Model):
     customer=models.ForeignKey(Customer, on_delete=models.CASCADE)
     items=models.ManyToManyField(MenuItem)
-    status=models.CharField(max_length=50, choices=[('pending','Pending'), ('completed','Completed'), ('cancelled','Cancelled')], default='pending')
+    status=models.CharField(max_length=50, choices=[('pending','Pending'), ('completed','Completed'), ('cancelled','Cancelled')],default='pending')
     order_date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"Order#{self.id} for{self.customer.name})"
-    
-
 class Reservation(models.Model):
     customer=models.ForeignKey(Customer,on_delete=models.CASCADE)
     date=models.DateTimeField()
@@ -49,5 +45,3 @@ class Reservation(models.Model):
 
     def __str__(self):
         return f"Reservation for {self.customer.name} on {self.date}"
-    
-    
