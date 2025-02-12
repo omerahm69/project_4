@@ -38,6 +38,7 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Order#{self.id} for{self.customer.name})"
+    
 class Reservation(models.Model):
     customer=models.ForeignKey(Customer,on_delete=models.CASCADE)
     date=models.DateTimeField()

@@ -18,7 +18,7 @@ def home(request):
 def about_us(request):
         return render(request, 'my_restaurant/about_us.html')
 
-def menu_item(request):
+def menu(request):
         items=MenuItem.objects.all()
         return render(request, 'my_restaurant/menu.html',{'items':items})
 
@@ -57,11 +57,11 @@ def register(request):
                                 messages.error(request,'Email already registered.')
                         else:
                                 user=User.objects.create_user(username=username, email=email, password=password)
-                                login(request, user)
+                                user_login(request, user)
                                 return redirect('home')
                                 messages.error(request, 'Passwords do not match.')
                         return render(request, 'register.html')
 def menu(request):
         menu_items = MenuItem.objects.all()
-        return render(request, 'restaurant/menu.html', {'menu_items': MenuItem})
+        return render(request, 'my_restaurant/menu.html', {'menu_items': MenuItem})
 
