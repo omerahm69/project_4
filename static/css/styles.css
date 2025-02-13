@@ -3,6 +3,15 @@ body {
     background-color: #f8f9fa;
 }
 
+.form-group {
+    marging-botton: 20px;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    font-size:  16px;
+}
 .logo{
     width: 100px;
     height: auto;
@@ -11,6 +20,12 @@ body {
 .logo img{
     height: 70px;
     vertical-align: middle;
+    .social-links a:hover{
+    color:#e76f51;
+}
+.logo a:hover{
+    color:#e76f51;
+
 }
 .card {
     border-radius: 10px;
@@ -26,21 +41,22 @@ body {
     color:007bff;
 }
 
+.menu-img {
+    width:100%;
+    height:200px;
+    border-top-right-radius: 10px;
+    
+}
 
+.card {
+    border-radius: 10px;
+    box-shadow:0px,4px,10px,rgba(0,0,0,0.1);
 
+}
 
 
 /* Contact Section*/
-.contact-container {
-    max-width: 600px;
-    background:white;
-    padding:30px;
-    border-radius: 10px;
-    box-shadow: 0px 4ps 10px rbba(0 0 0 0.1);
-}
-.from-control {
-    border-radius: 8px;
-}
+
 .from-control:focus {
     border: color #007bff;
     box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
@@ -52,6 +68,22 @@ button {
     border-radius: 8px;
 }
 
+.menu-category {
+    margin-bottom: 40px;
+}
+
+.menu-item {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
 .footer {
     background-color: #222;
     color:#fff;
@@ -94,3 +126,4 @@ button {
 footer a:hover {
     text-decoration: underline;
 }
+

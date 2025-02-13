@@ -2,8 +2,9 @@ from django.db import models
 from django.db import models
 
 # Create your models here.
-class restaurant(models.Model):
+class Restaurant(models.Model):
     name=models.CharField(max_length=255)
+    description=models.TextField(default=(''))
     price= models.FloatField()
     quantity=models.IntegerField()
     image=models.CharField(max_length=2083)

@@ -12,15 +12,15 @@ from .models import MenuItem as Menu
 
 def home(request):
         Menu.objects.all()
-        specials=MenuItem.objects.all()[:3]
+        specials=Menu.objects.all()[:3]
         return render(request, 'my_restaurant/home.html', {'specials': specials})
 
 def about_us(request):
         return render(request, 'my_restaurant/about_us.html')
 
 def menu(request):
-        items=MenuItem.objects.all()
-        return render(request, 'my_restaurant/menu.html',{'items':items})
+        menu_items=MenuItem.objects.all()
+        return render(request, 'my_restaurant/menu.html',{'menu_items':menu_items})
 
 def booking(request):
         return render(request, 'my_restaurant/booking.html')
@@ -63,5 +63,5 @@ def register(request):
                         return render(request, 'register.html')
 def menu(request):
         menu_items = MenuItem.objects.all()
-        return render(request, 'my_restaurant/menu.html', {'menu_items': MenuItem})
+        return render(request, 'my_restaurant/menu.html', {'menu_items': menu_items})
 

@@ -5,62 +5,35 @@
 {% block title %} Menu | Asmarino Restaurant{% endblock %}
 
 {% block content %}
-<header class="bg-primary text-white text-center py-5">
-  <h1>Our Menu</h1>
-</header>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card">
-          <img src="{% static 'images/pasta.jpg'%}" class="card-img-top" alt="Pasta">
-          <div class="card-body text-center">
-            <h5 class="card-title">Creamy Alfredo Pasta</h5>
-            <p class="card-text">Rich and creamy Alfredo sauce over fettuccine.</p>
-            <p class="fw-bold">$12.99</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="{% static 'images/margherita.jpg'%}" class="card-img-top" alt="Pizza">
-          <div class="card-body text-center">
-            <h5 class="card-title">Margherita Pizza</h5>
-            <p class="card-text">Classic pizza with fresh tomatoes, mozzarella, and basil.</p>
-            <p class="fw-bold">$9.99</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card">
-          <img src="{% static 'images/Caesar_salad.jpg'%}" class="card-img-top" alt="Salad">
-          <div class="card-body">
-            <h5 class="card-title">Caesar Salad</h5>
-            <p class="card-text">Crisp romaine lettuce with Caesar dressing and croutons.</p>
-            <p class="fw-bold">$8.99</p>
-          </div>
-        </div>
-      <div>
-        <!-- Drinks Section-->
-        <div class="mt-5">
-        <h2 class="text-center">Drinks Menu</h2>
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <div class="card p-4 text-center">
-                <h3 class="mb-3"> Cold Drinks</h3>
-                <ul class="list-unstyled">
-                  <li>Coca-Cola - <span class="fw-bold">$2.50</span></li>
-                  <li>Orange Juice - <span class="fw-bold">$3.00</span></li>
-                  <li>Lemonade - <span class="fw-bold">$3.50</span></li>
-                </ul>
-          <h3 class="mt-4">Soft Drinks</h3>
-                <ul class="list-unstyled">
-                  <li>Iced Tea - <span class="fw-bold">$2.75</span></li>
-                  <li>Mineral Water - <span class="fw-bold">$1.99</span></li>
-                  <li>Sparkling Water - <span class="fw-bold">$2.25</span></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-  </section>
 
-  {% endblock %}
+<header class="bg-primary text-white text-center py-5">
+    <h1>Our Menu </h1>
+</header>
+
+<div class="container mt-5">
+
+<div class="row">
+    {% for item in menu_items %}
+        <div class="col-md-4">
+            <div class="card mb-4">
+                {% if item.image %}
+                <img src="{{ item.image.url }}" class="card-img-top" alt="{{ item.name }}">
+            {% else %}
+                <img src="https://via.placeholder.com/300" class="card-img-top" alt="No image available">
+            {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">{{ item.description }}</p>
+
+                    <p class="card-text"><strong>Price: ${{ item.price }}</strong></p>
+                </div>
+            </div>
+        </div>
+    {% empty %}
+        <p>No menu items available.</p>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock %}
+
