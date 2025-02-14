@@ -54,7 +54,6 @@ input, button {
 
 }
 
-
 /* Contact Section*/
 
 .from-control:focus {
@@ -66,6 +65,10 @@ button {
     padding:10px;
     font-size: 18px;
     border-radius: 8px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: darkred;
 }
 
 .menu-category {
@@ -84,6 +87,14 @@ button {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
+
+.menu_item img {
+    width:200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
 .footer {
     background-color: #222;
     color:#fff;
@@ -93,14 +104,12 @@ button {
     padding: 20px 10px;
     font-family: Arial, sans-serif;
     margin:0 10px;
-
 }
 
 .footer h4 {
     font-size:1.2em;
     margin-bottom: 10px;
     color:#f4a261;
-
 }
 
 .footer p {
@@ -115,7 +124,6 @@ button {
 
 .social-links a:hover{
     color:#e76f51;
-
 }
 
 .footer-copy {
@@ -123,7 +131,13 @@ button {
     font-size:0.9em;
     opacity:0.8;
 }
+
 footer a:hover {
     text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}

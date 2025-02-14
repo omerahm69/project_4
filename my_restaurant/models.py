@@ -4,10 +4,10 @@ from django.db import models
 # Create your models here.
 class Restaurant(models.Model):
     name=models.CharField(max_length=255)
-    description=models.TextField(default=(''))
+    description=models.TextField(default='3')
     price= models.FloatField()
     quantity=models.IntegerField()
-    image=models.CharField(max_length=2083)
+    image=models.CharField(max_length=2083, default='default.jpg')
     banner=models.ImageField(default=(''), blank=True)
 
 
