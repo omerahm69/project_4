@@ -1,5 +1,4 @@
 
-
 {% extends 'my_restaurant/base.html' %}
 {% load static%}
 {% block title %} | Asmarino Restaurant{% endblock %}
@@ -70,19 +69,16 @@
     if (date && time && guests) {
       // Show availability result
     $('#availabilityResult').html('<p class="text-success">Table is available! Please confirm your booking.</p>');
-
       // Set confirmation details
     $('#confirmDate').text(date);
     $('#confirmTime').text(time);
     $('#confirmGuests').text(guests);
-
       // Show confirmation modal
     $('#confirmationModal').modal('show');
     } else {
     $('#availabilityResult').html('<p class="text-danger">Please complete all fields.</p>');
     }
     });
-
     $('#confirmBooking').on('click', function() {
     // Handle booking confirmation (e.g., send to server or display success message)
     $('#confirmationModal').modal('hide');

@@ -9,9 +9,7 @@
 <header class="bg-primary text-white text-center py-5">
     <h1>Our Menu </h1>
 </header>
-
 <div class="container mt-5">
-
 <div class="row">
     {% for item in menu_items %}
         <div class="col-md-4">
@@ -24,7 +22,6 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ item.name }}</h5>
                     <p class="card-text">{{ item.description }}</p>
-
                     <p class="card-text"><strong>Price: ${{ item.price }}</strong></p>
                 </div>
             </div>
@@ -34,6 +31,5 @@
     {% endfor %}
 </div>
 </div>
-
 {% endblock %}
 
