@@ -7,7 +7,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login as user_login
 from django.db import models
 from .models import MenuItem as Menu
-#from django.views import generic
 
 # Create your views here.
 
