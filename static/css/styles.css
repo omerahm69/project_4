@@ -1,12 +1,10 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #288aec;
+    background-color: #d2bfc1;
 }
-
 .form-group {
     marging-botton: 20px;
 }
-
 input, button {
     width: 100%;
     padding: 10px;
@@ -16,7 +14,6 @@ input, button {
     width: 100px;
     height: auto;
 }
-
 .logo img{
     height: 70px;
     vertical-align: middle;
@@ -25,14 +22,12 @@ input, button {
 }
 .logo a:hover{
     color:#e76f51;
-
 }
 .card {
     border-radius: 10px;
     box-shadow:0px 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
 }
-
 .card:hover {
     transform:0 10px;
 }
@@ -40,22 +35,17 @@ input, button {
     background-color: #f4a261;
     color:007bff;
 }
-
 .menu-img {
     width:100%;
     height:auto;
     border-top-right-radius: 10px;
     
 }
-
 .card {
     border-radius: 5px;
     box-shadow:0px,4px,10px,rgba(0,0,0,0.1);
-
 }
-
 /* Contact Section*/
-
 .form-control:focus {
     border: color #007bff;
     box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
@@ -69,30 +59,25 @@ button {
 button:hover {
     background-color: darkred;
 }
-
 .menu-category {
     margin-bottom: 40px;
 }
-
 .menu-item {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     text-align: center;
 }
-
 .menu-items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
 }
-
 .menu_item img {
     width:200px;
     height: auto;
     margin-bottom: 15px;
     border-radius: 10px;
-
 }
 .footer {
     background-color: #222;
@@ -104,37 +89,30 @@ button:hover {
     font-family: Arial, sans-serif;
     margin:0 10px;
 }
-
 .footer h4 {
     font-size:1.2em;
     margin-bottom: 10px;
     color:#f4a261;
 }
-
 .footer p {
     font-size: 1em;
     margin:5px 0;
     
 }
-
 .social-links {
     margin: 10px;
 }
-
 .social-links a:hover{
     color:#e76f51;
 }
-
 .footer-copy {
     margin-top: 15px;
     font-size:0.9em;
     opacity:0.8;
 }
-
 footer a:hover {
     text-decoration: underline;
 }
-
 @media (max-width: 768px) {
     .container {
         padding: 5px;
