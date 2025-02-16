@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login as auth_login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import login as user_login
 from django.db import models
 from .models import MenuItem as Menu
 #from django.views import generic
@@ -27,9 +28,9 @@ def booking(request):
 
 def contact_us(request):
         if request.method =='POST':
-                name=request.POST['name']
-                email=request.POST['email']
-                message=request.POST['message']
+                name=request.POST.get('name')
+                email=request.POST.get ('email')
+                message=request.POST.get('message')
                 messages.success(request,'Your message has been submitted!')
                 return redirect('contact_us')
         return render(request, 'my_restaurant/contact_us.html')
@@ -46,10 +47,10 @@ def user_login(request):
         return render(request, 'my_restaurant/login.html')
 def register(request):
         if request.method=='POST':
-                username=request.POST['username']
-                email=request.POST['email']
-                password=request.POST['password']
-                confirm_password=request.POST['confirm_password']
+                username=request.POST.get('username', '')
+                email=request.POST.get('email', '')
+                password=request.POST.get('password', '')
+                confirm_password=request.POST.get('confirm_password')
                 if password==confirm_password:
                         if User.objects.filter(username).exists():
                                 messages.error(request,'Username already exist.')
@@ -59,8 +60,10 @@ def register(request):
                                 user=User.objects.create_user(username=username, email=email, password=password)
                                 user_login(request, user)
                                 return redirect('home')
-                                messages.error(request, 'Passwords do not match.')
-                        return render(request, 'register.html')
+                        messages.error(request, 'Passwords do not match.')
+                return render(request, 'my_restaurant/login.html', {'message': 'Registration successful!'})
+        return render(request, 'my_restaurant/login.html')
+
 def menu(request):
         menu_items = MenuItem.objects.all()
         return render(request, 'my_restaurant/menu.html', {'menu_items': menu_items})
