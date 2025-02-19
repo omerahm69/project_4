@@ -12,7 +12,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card-md-6">
-                <p class="text-center">If you don't have an account? <a href="/register/">Register</a></p>
+                <p class="text-center">If you don't have an account? <a href="{% url 'register' %}">Register</a>
             <form method="POST" action="/login/">
                 {% csrf_token %}
                 <div class="mb-3">
@@ -41,8 +41,9 @@
             <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class "card p-4">
+                
                 <h2 class="text-center mb-4">Register</h2>
-                <form method="POST" action="{% url 'register'%}>
+                <form method="POST" action="{% url 'register'%}">
                     {% csrf_token%}
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>

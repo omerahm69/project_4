@@ -63,6 +63,9 @@ def register(request):
                 return render(request, 'my_restaurant/login.html', {'message': 'Registration successful!'})
         return render(request, 'my_restaurant/login.html')
 
+def register(request):
+        return render(request, 'my_restaurant/login.html')
+
 def menu(request):
         menu_items = MenuItem.objects.all()
         return render(request, 'my_restaurant/menu.html', {'menu_items': menu_items})

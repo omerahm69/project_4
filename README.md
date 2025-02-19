@@ -1,29 +1,32 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
+Project-4
 
-Project Overview
+This project is about restaurant management system using Django.
 
 Objective:
-Develop a restaurant booking system where external users can reserve tables, and the site owner can manage bookings, ensuring smooth restaurant operations.
+Is to develop a restaurant booking system where external users can reserve tables, and the site owner can manage bookings, ensuring smooth restaurant operations.
+
+Wireframe below is the design I have chosen to build the site. The design is consistent throughout the site. The site has sex pages: Home, About Us, Menu, Booking, contact us and login.
+![Wireframe](images/image.png)
 
 Features:
 a. External User Features (Guests)
-1. Table Bokking
+1. Table Booking
 - Users can select a date,time and numbers of guests.
 - Available tables displayed based on capacity
 
 2. Booking Confirmation
 - Booking confirmed with date/time
-- Email/SMS notification sent after successful booking
 
 3. Menu Preview
 
-Users can browse the restaurant menu while booking or independently.
+- Users can browse the restaurant menu while booking or independently.
 Menu with categories (e.g., starters, mains, desserts).
 
-4.User Registration and Login (Optional)
+4.User Registration and Login
 
-Guests can create accounts or book without registration.
+- Guests can create accounts or book without registration.
 
 B. Site Owner Features (Restaurant Staff)
 1. Admin Dashboard
@@ -38,16 +41,6 @@ C. User-Friendly UI
 
 - Mobile-responsive design for ease of use.
 - Intuitive booking process (few steps).
-
-
-
-
-
-
-
-
-
-
 
 
 
