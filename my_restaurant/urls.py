@@ -1,7 +1,9 @@
 
-from django.urls import path
+from django.urls import path, include
 from django.contrib import admin
-from . import views
+from. import views
+from . views import login_register_view
+from django.contrib.auth.views import LoginView
 
 
 urlpatterns = [
@@ -11,8 +13,8 @@ urlpatterns = [
     path('menu/', views.menu, name='menu'),
     path('booking/', views.booking, name='booking'),
     path('contact_us/', views.contact_us, name='contact_us'),
-    path('user_login/', views.user_login, name='login'),
-    path('accounts/register/', views.register, name='register'),
-    
-    
-]
+    path('login/', login_register_view, name = 'login '),
+    path('', include("django.contrib.auth.urls")),
+   
+    path('register/', views.register, name='register'),
+    ]
