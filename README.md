@@ -45,17 +45,22 @@ ERD
 Features:
 A. Base Features
 Navbar
+![Wireframe](https://github.com/omerahm69/project_4/blob/main/static/images/Sk%C3%A4rmbild%202025-02-24%20165421_home.png)
 
 - Displays logo image and brand name link to the home page
 - Includes a toggle button to expand or collapse the naviation links in dropdown menu.
 
 Footer
 - The footer contains social media links and a consistent footer background color.
+![Wireframe](https://github.com/omerahm69/project_4/blob/main/static/images/Sk%C3%A4rmbild%202025-02-24%20165421_home.png)
+
 
 B. External User Features (Guests)
 1. Table Booking
 - Users can select a date,time and numbers of guests.
 - Available tables displayed based on restaurant capacity
+
+![Wireframe](https://github.com/omerahm69/project_4/blob/main/static/images/Sk%C3%A4rmbild%202025-02-24%20165727_book_a_table.png)
 
 2. Booking Confirmation
 - User recieve a confirmation of their booking with date and time details.
@@ -64,9 +69,15 @@ B. External User Features (Guests)
 - Users can browse the restaurant menu while booking or independently.
 - The menu includes categories starters, mains, desserts.
 
+![Wireframe](https://github.com/omerahm69/project_4/blob/main/static/images/Sk%C3%A4rmbild%202025-02-24%20165643_our_menu.png)
+
 4.User Registration and Login
 
 - Guests can create accounts or book without registration.
+![Wireframe](https://github.com/omerahm69/project_4/blob/main/static/images/Sk%C3%A4rmbild%202025-02-24%20165844_login.png)
+
+![Wireframe](https://github.com/omerahm69/project_4/blob/main/static/images/Sk%C3%A4rmbild%202025-02-24%20195957_register.png)
+
 
 C. Site Owner Features (Restaurant Staff)
 
