@@ -2,14 +2,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #d2bfc1;
 }
+/*General Form Styling*/
 .form-group {
-    marging-botton: 20px;
+    margin-bottom: 20px;
 }
 input, button {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     font-size:  16px;
 }
+/*Logo*/
 .logo{
     width: 100px;
     height: auto;
@@ -17,49 +19,27 @@ input, button {
 .logo img{
     height: 70px;
     vertical-align: middle;
-    .social-links a:hover{
-    color:#e76f51;
 }
 .logo a:hover{
     color:#e76f51;
 }
+
+/*Card Styles*/
 .card {
     border-radius: 10px;
     box-shadow:0px 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease-in-out;
 }
 .card:hover {
-    transform:0 10px;
+    transform:translateY(- 10px);
 }
-.btn-light {
-    background-color: #f4a261;
-    color:007bff;
-}
+/*Menu Image*/
 .menu-img {
     width:100%;
     height:auto;
     border-top-right-radius: 10px;
     
-}
-.card {
-    border-radius: 5px;
-    box-shadow:0px,4px,10px,rgba(0,0,0,0.1);
-}
-/* Contact Section*/
-.form-control:focus {
-    border: color #007bff;
-    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
-}
-button {
-    width:100%;
-    font-size: 18px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-button:hover {
-    background-color: darkred;
-}
-.menu-category {
+}.menu-category {
     margin-bottom: 40px;
 }
 .menu-item {
@@ -79,6 +59,34 @@ button:hover {
     margin-bottom: 15px;
     border-radius: 10px;
 }
+/*Fixed Card Shadow*/
+.card {
+    border-radius: 5px;
+    box-shadow:0px,4px,10px,rgba(0,0,0,0.1);
+}
+/* Contact Section*/
+.form-control:focus {
+    border: color #007bff;
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.5);
+}
+/*Button Styles*/
+button {
+    width:100%;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    border:none;
+    transition: background-color 0.3s ease-in-out;;
+}
+button:hover {
+    background-color: darkred;
+}
+.btn-light {
+    background-color: #f4a261;
+    color:007bff;
+}
+
+/*Footer Styling*/
 .footer {
     background-color: #222;
     color:#fff;
@@ -99,12 +107,6 @@ button:hover {
     margin:5px 0;
     
 }
-.social-links {
-    margin: 10px;
-}
-.social-links a:hover{
-    color:#e76f51;
-}
 .footer-copy {
     margin-top: 15px;
     font-size:0.9em;
@@ -113,6 +115,15 @@ button:hover {
 footer a:hover {
     text-decoration: underline;
 }
+.social-links {
+    margin: 10px;
+}
+.social-links a:hover{
+    color:#e76f51;
+} .social-links a:hover{
+    color:#e76f51;
+    }
+/*Responsive Styling*/
 @media (max-width: 768px) {
     .container {
         padding: 5px;

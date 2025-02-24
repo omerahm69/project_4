@@ -21,7 +21,7 @@ The site consists of sex pages:
 5. Contact Us
 6. Login/Register
 
-![Wireframe](images/image.png)
+![Wireframe](https://github.com/omerahm69/project_4/blob/main/static/images/Wireframe.png)
 
 User Stories and admin requirements
 
@@ -116,14 +116,42 @@ Clonning the Repository
 5. Press Enter.
 
 
+Heroku Deployment
 
+1. Log in to your Heroku  account or create an account if you don't already have one.
+2. Click the "New" button at the tpo right corner and select "Create New App".
+3. Enter a unique application name for your app.
+4. Select your region
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+5. Click "Create App".
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+Prepare environment and settings.py
+1. In your local development environment create an env.py file in the root directory.
+2. Add the DATABASE_URL and your chosen SECRET_KEY to the env.py file.
+3. In your settings.py, import the env.py file and add the paths for the SECRET_KEY and DATABASE_URL.
+4. Comment out the default SQLite database configuration
+5. Save all files and run migrations to update your database.
+6. Update the STATIC files settings:
+Set the URL, storage path, directory path, root path, media URL, and default file storage path for your static and media files.
+7. Link the TEMPLATES_DIR to the templates directory in Heroku.
+8. Add the Heroku app to the ALLOWED_HOSTS list in the format:['your-app-name.herokuapp.com'] '.
+
+Add the following Config Vars in Heroku:
+1. SECRET_KEY- Use a Django-generated secret key.
+2. PORT = 8000
+3. DISABLE_COLLECTSTATIC = 1- This is temporary and shoul be removed before final deployment.
+4. DATABASE_URL - Use the PostgreSQL database URL provided by Heroku's built-in Postgres add-on.
+
+Setting up PostgreSQL on Heroku:
+1. In the "Resources" tab on your Heroku app dashboard, search for "Heroku Postgres".
+2. Once the database is attached, the DATABASE_URL will automatically be set in your Heroku config vars.
+
+Additional Files Needed for Heroku Deployment:
+
+1. requirements.txt - A list of required packages for the project.
+2. Procfile - Used to specify the commands that are run by Heroku's dynos.
+
+Once these steps are complete, the site should be ready for deployment on Heroku with PostgreSQL.
+
 
 
