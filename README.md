@@ -52,7 +52,7 @@ Navbar
 
 Footer
 - The footer contains social media links and a consistent footer background color.
-![Wireframe](https://github.com/omerahm69/project_4/blob/main/static/images/Sk%C3%A4rmbild%202025-02-24%20165421_home.png)
+![Wireframe](https://github.com/omerahm69/project_4/blob/main/static/images/Sk%C3%A4rmbild%202025-02-24%20214216_footer.png)
 
 
 B. External User Features (Guests)
