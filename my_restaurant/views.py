@@ -14,7 +14,7 @@ from django.contrib.auth import views as auth_views
 # Create your views here.
 
 def home(request):
-        specials = Menu.objects.all()[:3]
+        specials = MenuItem.objects.all()[:3]
         return render(request, 'my_restaurant/home.html', {'specials': specials})
 
 def about_us(request):
