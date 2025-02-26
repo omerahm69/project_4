@@ -39,8 +39,46 @@ Admin Requirements
 
 Database Design
 The database design follows an Entity-Relationship Diagram (ERD) to define how data is structured and related.
-
-ERD
+Entities:
+1. Customer
+2. MenuItem
+3. Order
+4. Reservation
+5. Booking
+Relationships are:
+- Order has a ForeignKey relationship to Customer and a ManyToMany relationship to MenuItem
+- Reservation has a ForeignKey relationship to Customer
+- Booking has a ForeignKey relationship to Costumer and Table
+Below is the simplified ERD structure:
+- Customer:
+  - name
+  - email
+- MenuItem:
+    -name
+    -description
+    -quantity
+    -image
+    -banner
+    -price
+    -available
+-Order:
+    -customer (ForeignKey to Customer)
+    -items (ManayToMany to MenuItem)
+    -status
+    -order_date
+-Reservation:
+    -customer (ForeignKey to Customer)
+    -date
+    -number_of_people
+-Table:
+    -table_number
+    -seats
+Booking:
+    -user (ForeignKey to Customer)
+    -table (ForeignKey to Table)
+    -date
+    -time
+    -guests
 
 Features:
 A. Base Features
@@ -102,8 +140,6 @@ Technologies Used
 
 - Backend: Python, Django
 
-- 
-
 - Media Storage: Cloudinary (for images)
 
 Testing
@@ -118,7 +154,7 @@ Fork the Repository
 4. Add a description to your fork.
 5. Click Create fork.
  
-Clonning the Repository
+Clone the Repository
 1. Above the list of files click the button that says 'Code'.
 2. Copy the URL for the repository.
 3. Open Terminal or Command Prompt
@@ -145,7 +181,7 @@ Prepare environment and settings.py
 6. Update the STATIC files settings:
 Set the URL, storage path, directory path, root path, media URL, and default file storage path for your static and media files.
 7. Link the TEMPLATES_DIR to the templates directory in Heroku.
-8. Add the Heroku app to the ALLOWED_HOSTS list in the format:['your-app-name.herokuapp.com'] '.
+8. Add the Heroku app to the ALLOWED_HOSTS list in the format:['my_restaurant.herokuapp.com'] '.
 
 Add the following Config Vars in Heroku:
 1. SECRET_KEY- Use a Django-generated secret key.

@@ -34,7 +34,9 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
     'my_restaurant.apps.MyRestaurantConfig',
+    
 ]
+
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
@@ -125,7 +127,7 @@ STATIC_URL = '/static/'
 
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT=BASE_DIR / 'media'
 
 if 'DYNO' in os.environ:
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
