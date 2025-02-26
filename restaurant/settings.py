@@ -25,12 +25,14 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.sites',
     'django.contrib.auth',
-    
+    'allauth',
     'allauth.account',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'my_restaurant.apps.MyRestaurantConfig',
 ]
 
