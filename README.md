@@ -39,8 +39,46 @@ Admin Requirements
 
 Database Design
 The database design follows an Entity-Relationship Diagram (ERD) to define how data is structured and related.
-
-ERD
+Entities:
+1. Customer
+2. MenuItem
+3. Order
+4. Reservation
+5. Booking
+Relationships are:
+- Order has a ForeignKey relationship to Customer and a ManyToMany relationship to MenuItem
+- Reservation has a ForeignKey relationship to Customer
+- Booking has a ForeignKey relationship to Costumer and Table
+Below is the simplified ERD structure:
+- Customer:
+  - name
+  - email
+- MenuItem:
+    -name
+    -description
+    -quantity
+    -image
+    -banner
+    -price
+    -available
+-Order:
+    -customer (ForeignKey to Customer)
+    -items (ManayToMany to MenuItem)
+    -status
+    -order_date
+-Reservation:
+    -customer (ForeignKey to Customer)
+    -date
+    -number_of_people
+-Table:
+    -table_number
+    -seats
+Booking:
+    -user (ForeignKey to Customer)
+    -table (ForeignKey to Table)
+    -date
+    -time
+    -guests
 
 Features:
 A. Base Features
