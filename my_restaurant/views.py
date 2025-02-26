@@ -8,13 +8,14 @@ from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm
 from django.db import models
 from .models import MenuItem as Menu
+from .models import Special
 
 from django.contrib.auth import views as auth_views
 
 # Create your views here.
 
 def home(request):
-        specials = MenuItem.objects.all()[:3]
+        specials = Special.objects.all()[:3]
         return render(request, 'my_restaurant/home.html', {'specials': specials})
 
 def about_us(request):

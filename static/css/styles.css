@@ -3,6 +3,11 @@ body {
     background-color: #d2bfc1;
 }
 /*General Form Styling*/
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -79,7 +84,7 @@ button {
     transition: background-color 0.3s ease-in-out;;
 }
 button:hover {
-    background-color: darkred;
+    background-color: rgb(5, 26, 215);
 }
 .btn-light {
     background-color: #f4a261;

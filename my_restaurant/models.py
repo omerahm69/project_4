@@ -66,3 +66,11 @@ class Booking(models.Model):
     def __str__(self):
         return f'Booking for {self.user} on {self.date} at {self.time}'
 
+def default_image():
+    return 'images/default-dish.jpg'
+
+class Special(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    image = models.ImageField(upload_to='specials/', default=default_image)
