@@ -181,7 +181,7 @@ Prepare environment and settings.py
 6. Update the STATIC files settings:
 Set the URL, storage path, directory path, root path, media URL, and default file storage path for your static and media files.
 7. Link the TEMPLATES_DIR to the templates directory in Heroku.
-8. Add the Heroku app to the ALLOWED_HOSTS list in the format:['your-app-name.herokuapp.com'] '.
+8. Add the Heroku app to the ALLOWED_HOSTS list in the format:['my_restaurant.herokuapp.com'] '.
 
 Add the following Config Vars in Heroku:
 1. SECRET_KEY- Use a Django-generated secret key.
