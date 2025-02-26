@@ -7,7 +7,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm
 from django.db import models
-from .models import MenuItem as Menu
+from .models import MenuItem 
 from .models import Special
 
 from django.contrib.auth import views as auth_views
@@ -19,10 +19,12 @@ def home(request):
         return render(request, 'my_restaurant/home.html', {'specials': specials})
 
 def about_us(request):
+        
         return render(request, 'my_restaurant/about_us.html')
 
 def menu(request):
         menu_items = MenuItem.objects.all()
+        cloudinary_image={'menu_items':menu_items}
         return render(request, 'my_restaurant/menu.html', {'menu_items': menu_items})
 
 def booking(request):

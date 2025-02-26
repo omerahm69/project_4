@@ -1,5 +1,7 @@
 from django.db import models
 from django.db import models
+from cloudinary.models import CloudinaryField
+
 
 # Create your models here.
 class Restaurant(models.Model):
@@ -9,6 +11,7 @@ class Restaurant(models.Model):
     quantity=models.IntegerField()
     image=models.CharField(max_length=2083, default='default.jpg')
     banner=models.ImageField(default=(''), blank=True)
+    image=CloudinaryField('image', default=1)
 
 
 class Customer(models.Model):
@@ -27,6 +30,7 @@ class MenuItem(models.Model):
     banner=models.ImageField(default=(''), blank=True)
     price=models.DecimalField(max_digits=6, decimal_places=2)
     available=models.BooleanField(default=True)
+    image=CloudinaryField('image')
 
     def __str__(self):
         return self.name

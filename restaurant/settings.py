@@ -6,6 +6,12 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
+
+    # cloudinary import
+    import cloudinary
+    import cloudinary.uploader
+    import cloudinary.api
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR=os.path.join(BASE_DIR,'templates')
@@ -14,7 +20,7 @@ TEMPLATES_DIR=os.path.join(BASE_DIR,'templates')
 SECRET_KEY = 'django-insecure-!+oz1)35@#_90iyon!k4d98++mi@92x5%8#_qfeuo5_2%!=t&%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
 
@@ -142,3 +148,11 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 django_heroku.settings(locals())
+
+# cloudinary django configuration
+cloudinary.config(
+
+    cloud_name="dzokjmctg",
+    api_key="348337476342247",
+    api_secret="A9MjfhD1HBAUjTkaUQuQqKsgVQs",
+)
