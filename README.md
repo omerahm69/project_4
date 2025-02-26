@@ -140,8 +140,6 @@ Technologies Used
 
 - Backend: Python, Django
 
-- 
-
 - Media Storage: Cloudinary (for images)
 
 Testing
@@ -156,7 +154,7 @@ Fork the Repository
 4. Add a description to your fork.
 5. Click Create fork.
  
-Clonning the Repository
+Clone the Repository
 1. Above the list of files click the button that says 'Code'.
 2. Copy the URL for the repository.
 3. Open Terminal or Command Prompt
