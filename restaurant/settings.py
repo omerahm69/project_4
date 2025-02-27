@@ -11,6 +11,7 @@ if os.path.isfile('env.py'):
     import cloudinary
     import cloudinary.uploader
     import cloudinary.api
+    from django.core.files.storage import default_storage
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +21,7 @@ TEMPLATES_DIR=os.path.join(BASE_DIR,'templates')
 SECRET_KEY = 'django-insecure-!+oz1)35@#_90iyon!k4d98++mi@92x5%8#_qfeuo5_2%!=t&%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
 

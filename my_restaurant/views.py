@@ -25,7 +25,7 @@ def about_us(request):
 def menu(request):
         menu_items = MenuItem.objects.all()
         cloudinary_image={'menu_items':menu_items}
-        return render(request, 'my_restaurant/menu.html', {'menu_items': menu_items})
+        return render(request, 'my_restaurant/menu.html', {'cloudinary_image': cloudinary_image})
 
 def booking(request):
         return render(request, 'my_restaurant/booking.html')
