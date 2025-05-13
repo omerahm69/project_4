@@ -10,7 +10,7 @@ class Restaurant(models.Model):
     price= models.FloatField()
     quantity=models.IntegerField()
     image=models.CharField(max_length=2083, default='default.jpg')
-    #banner = models.ImageField(upload_to='banners/', blank=True, null=True)
+    banner = models.ImageField(upload_to='banners/', blank=True, null=True)
     image=CloudinaryField('image', default='default.jpg')
 
 
