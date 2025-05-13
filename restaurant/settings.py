@@ -14,6 +14,7 @@ load_dotenv()
 
     # cloudinary import
 import cloudinary
+import cloudinary_storage
 import cloudinary.uploader
 import cloudinary.api
 from django.core.files.storage import default_storage
@@ -147,6 +148,9 @@ MEDIA_ROOT=BASE_DIR / 'media'
 
 if 'DYNO' in os.environ:
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
