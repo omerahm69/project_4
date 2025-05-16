@@ -27,13 +27,14 @@ TEMPLATES_DIR=os.path.join(BASE_DIR,'templates')
 SECRET_KEY = 'django-insecure-!+oz1)35@#_90iyon!k4d98++mi@92x5%8#_qfeuo5_2%!=t&%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+
 
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['127.0.0.1','.herokuapp.com']
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,.herokuapp.com').split(',')
+
+
 
 # Application definition
 
@@ -53,7 +54,6 @@ INSTALLED_APPS = [
     'my_restaurant.apps.MyRestaurantConfig',
     
 ]
-
 
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
@@ -122,7 +122,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
@@ -134,17 +133,15 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-BASE_DIR = Path(__file__).resolve().parent.parent
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_URL = '/static/'
 
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT=BASE_DIR / 'media'
+MEDIA_ROOT=BASE_DIR / 'media/'
 
 if 'DYNO' in os.environ:
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

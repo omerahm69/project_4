@@ -7,7 +7,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from .forms import RegisterForm
 from django.db import models
-from .models import MenuItem 
+from .models import MenuItem
 from .models import Special
 
 from django.contrib.auth import views as auth_views
