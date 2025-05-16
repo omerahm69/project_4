@@ -25,7 +25,7 @@ class Customer(models.Model):
 class MenuItem(models.Model):
     name=models.CharField(max_length=100)
     description=models.TextField()
-    quantity=models.IntegerField(default=0)
+    quantity=models.IntegerField(null=True, blank=True)
     image = models.ImageField(upload_to='menu_images/', default='menu_images/default.jpg', null=True, blank=True)
     image=CloudinaryField('image')
     banner=models.ImageField(default=(''), blank=True)
