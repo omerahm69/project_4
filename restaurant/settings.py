@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 # Load .env file
 load_dotenv()
 
-    # cloudinary import
+# cloudinary import
 import cloudinary
 import cloudinary_storage
 import cloudinary.uploader
@@ -27,7 +27,7 @@ TEMPLATES_DIR=os.path.join(BASE_DIR,'templates')
 SECRET_KEY = 'django-insecure-!+oz1)35@#_90iyon!k4d98++mi@92x5%8#_qfeuo5_2%!=t&%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
@@ -171,5 +171,3 @@ cloudinary.config(
     api_key=os.getenv('CLOUDINARY_API_KEY'),
     api_secret=os.getenv('CLOUDINARY_API_SECRET'),
 )
-
-
