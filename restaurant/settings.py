@@ -5,13 +5,8 @@ import django_heroku
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
-
 import os
 from dotenv import load_dotenv
-
-# Load .env file
-load_dotenv()
-
 # cloudinary import
 import cloudinary
 import cloudinary_storage
@@ -19,15 +14,19 @@ import cloudinary.uploader
 import cloudinary.api
 from django.core.files.storage import default_storage
 
+# Load .env file
+load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATES_DIR=os.path.join(BASE_DIR,'templates')
+TEMPLATES_DIR = os.path.join( BASE_DIR , 'templates')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-!+oz1)35@#_90iyon!k4d98++mi@92x5%8#_qfeuo5_2%!=t&%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 
@@ -140,7 +139,7 @@ STATIC_URL = '/static/'
 
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT=BASE_DIR / 'media/'
+MEDIA_ROOT=BASE_DIR / 'uploads/'
 
 if 'DYNO' in os.environ:
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -159,9 +158,13 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 django_heroku.settings(locals())
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': os.getenv('CLOUDINARY_CLOUD_NAME'),
+    'API_KEY': os.getenv('CLOUDINARY_API_KEY'),
+    'API_SECRET': os.getenv('CLOUDINARY_API_SECRET'),
+}
 
 # Cloudinary configuration
-import cloudinary
 cloudinary.config(
     cloud_name=os.getenv('CLOUDINARY_CLOUD_NAME'),
     api_key=os.getenv('CLOUDINARY_API_KEY'),
