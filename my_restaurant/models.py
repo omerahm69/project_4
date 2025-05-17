@@ -26,13 +26,12 @@ class MenuItem(models.Model):
     name=models.CharField(max_length=100)
     description=models.TextField()
     quantity=models.IntegerField(null=True, blank=True)
-    image = models.ImageField(upload_to='menu_images/', default='menu_images/default.jpg', null=True, blank=True)
+    image = models.ImageField(upload_to='menu_items/', default='menu_items/default.jpg', null=True, blank=True)
     image=CloudinaryField('image')
     banner=models.ImageField(default=(''), blank=True)
     price=models.DecimalField(max_digits=6, decimal_places=2)
     available=models.BooleanField(default=True)
     
-
     def __str__(self):
         return self.name
     
