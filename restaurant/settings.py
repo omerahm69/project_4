@@ -33,7 +33,25 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,.herokuapp.com').split(',')
 
+# Only allow secure cookies over HTTPS
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
+# Use secure browser features
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# Force HTTPS redirect
+SECURE_SSL_REDIRECT = True
+
+# Use HTTP Strict Transport Security (HSTS)
+SECURE_HSTS_SECONDS = 31536000  # 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+
+# Prevent the site from being embedded in an iframe
+X_FRAME_OPTIONS = 'DENY'
 
 # Application definition
 
