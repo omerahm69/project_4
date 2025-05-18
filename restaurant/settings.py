@@ -7,7 +7,6 @@ if os.path.isfile('env.py'):
     import env
 import os
 from dotenv import load_dotenv
-
 # cloudinary import
 import cloudinary
 import cloudinary_storage
@@ -33,25 +32,7 @@ DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,.herokuapp.com').split(',')
 
-# Only allow secure cookies over HTTPS
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
 
-# Use secure browser features
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_CONTENT_TYPE_NOSNIFF = True
-
-# Force HTTPS redirect
-SECURE_SSL_REDIRECT = True
-
-# Use HTTP Strict Transport Security (HSTS)
-SECURE_HSTS_SECONDS = 31536000  # 1 year
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-SECURE_HSTS_PRELOAD = True
-
-
-# Prevent the site from being embedded in an iframe
-X_FRAME_OPTIONS = 'DENY'
 
 # Application definition
 
@@ -157,12 +138,16 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 STATIC_URL = '/static/'
 
 
-
 MEDIA_URL = 'media/'
 MEDIA_ROOT=BASE_DIR / 'uploads/'
 
 if 'DYNO' in os.environ:
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+if 'DYNO' in os.environ:
+    SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
